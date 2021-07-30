@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+body {
+  margin: 0;
+  font-family: system-ui;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body{
+
+  background-color: #8ecae6;
+  .wrapper{
+
+    width: 1080px;
+    max-width: 1080px;
+    height: 1600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto 0;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 20px;
+
+      .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-bottom: solid 2px #f1f1f1;
+
+        .header__left-side{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-left: 60px;
+
+          .header__logo{
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+          }
+
+          .header__span{
+            .header__name{
+              font-family: 'inter';
+            }
+            .header__title{
+              font-family: 'inter';
+            }
+          }
+        }
+
+
+        .header__right-side{
+          margin-right: 60px;
+          .header__list{
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            align-items: center;
+            li{
+              margin: 0 25px;
+            }
+          }
+        }
+
+      }
+
+
+  }
+
+  .content{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 80%;
+    .content__slider{
+      width: 100%;
+      height: 300px;
+      background-color: #8ecae6;
+      border-radius: 10px;
+      margin: 45px auto;
+    }
+    .content__sneakers-bar{
+      width: 100%;
+      .content__header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .content__title{
+          text-align: left;
+          font-family: 'inter';
+        }
+        .content__search-form{
+          .content__input{
+            border: 1px solid #F3F3F3;
+            box-sizing: border-box;
+            border-radius: 10px;
+            width: 250px;
+            height: 45px;
+          }
+        }
+      }
+
+      .content__sneakers{
+        .content_sneakers-row{
+          display: flex;
+          .content__sneaker-block{
+            width: 23%;
+            height: 240px;
+            margin: 40px calc(8%/4);
+            background-color: #FFFFFF;
+            border-radius: 20px;
+            border: 1px solid #F3F3F3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .content__sneaker-img{
+              width: 133px;
+              height: 112px;
+            }
+
+            .content__like{
+              margin: 5px 5px;
+              position: relative;
+              right: 60px;
+              top: 35px;
+            }
+            .content__plus{
+              margin: 5px 5px;
+              position: relative;
+              left: 60px;
+              bottom: 35px;
+            }
+            .content__sneaker-text{
+              display: flex;
+              flex-direction: column;
+              .content__sneaker-description{
+                font-family: 'inter';
+                font-size: 14px;
+              }
+              .content__sneaker-price{
+                font-family: 'inter';
+                font-size: 11px;
+                color: #BDBDBD;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+  }
+}
+
+input{
+  outline: none;
+}
+.price{
+  font-size: 14px;
+  color: #000;
+}
+
+.content__like:hover{
+  cursor: pointer;
+}
+
+.content__plus:hover{
+  cursor: pointer;
+}
