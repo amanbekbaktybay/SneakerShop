@@ -5,7 +5,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+*{
+  font-family: 'inter';
+  list-style: none;
+}
 body{
 
   background-color: #8ecae6;
@@ -67,97 +70,265 @@ body{
 
       }
 
-
-  }
-
-  .content{
+    .content{
       display: flex;
       align-items: center;
       flex-direction: column;
       width: 80%;
-    .content__slider{
-      width: 100%;
-      height: 300px;
-      background-color: #8ecae6;
-      border-radius: 10px;
-      margin: 45px auto;
-    }
-    .content__sneakers-bar{
-      width: 100%;
-      .content__header{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        .content__title{
-          text-align: left;
-          font-family: 'inter';
-        }
-        .content__search-form{
-          .content__input{
+      .content__slider{
+        width: 100%;
+        height: 300px;
+        background-color: #8ecae6;
+        border-radius: 10px;
+        margin: 45px auto;
+      }
+      .content__sneakers-bar{
+        width: 100%;
+        .content__header{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .content__title{
+            text-align: left;
+            font-family: 'inter';
+          }
+          .content__search-form{
             border: 1px solid #F3F3F3;
             box-sizing: border-box;
-            border-radius: 10px;
-            width: 250px;
-            height: 45px;
-          }
-        }
-      }
-
-      .content__sneakers{
-        .content_sneakers-row{
-          display: flex;
-          .content__sneaker-block{
-            width: 23%;
-            height: 240px;
-            margin: 40px calc(8%/4);
-            background-color: #FFFFFF;
             border-radius: 20px;
-            border: 1px solid #F3F3F3;
+            width: 250px;
+            height: 35px;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            .content__sneaker-img{
-              width: 133px;
-              height: 112px;
+            .content__input{
+              outline: none;
+              border: 0;
             }
+            .content__search-icon{
+              margin-right: 15px;
+            }
+          }
+        }
 
-            .content__like{
-              margin: 5px 5px;
-              position: relative;
-              right: 60px;
-              top: 35px;
+        .content__sneakers{
+          .content_sneakers-row{
+            display: flex;
+            .content__sneaker-block:hover{
+              box-shadow: 0px 14px 30px rgba(0,0,0,0.5);
+              transition: all 0.5s;
+              transform: translateY(-5px);
             }
-            .content__plus{
-              margin: 5px 5px;
-              position: relative;
-              left: 60px;
-              bottom: 35px;
-            }
-            .content__sneaker-text{
+            .content__sneaker-block{
+              width: 23%;
+              height: 240px;
+              margin: 40px calc(8%/4);
+              background-color: #FFFFFF;
+              border-radius: 20px;
+              border: 1px solid #F3F3F3;
               display: flex;
               flex-direction: column;
-              .content__sneaker-description{
-                font-family: 'inter';
-                font-size: 14px;
+              justify-content: center;
+              align-items: center;
+              .content__sneaker-img{
+                width: 133px;
+                height: 112px;
               }
-              .content__sneaker-price{
-                font-family: 'inter';
-                font-size: 11px;
-                color: #BDBDBD;
+
+              .content__like{
+                margin: 5px 5px;
+                position: relative;
+                right: 60px;
+                top: 35px;
               }
+              .content__plus{
+                margin: 5px 5px;
+                position: relative;
+                left: 60px;
+                bottom: 35px;
+              }
+              .content__sneaker-text{
+                display: flex;
+                flex-direction: column;
+                .content__sneaker-description{
+                  font-family: 'inter';
+                  font-size: 14px;
+                }
+                .content__sneaker-price{
+                  font-family: 'inter';
+                  font-size: 11px;
+                  color: #BDBDBD;
+                }
+              }
+            }
+          }
+
+        }
+
+      }
+    }
+
+    .basket{
+      //display: none;
+      height: 100vh;
+      .basket__blind{
+        box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+        background-color: rgba(0,0,0,0.5);
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 1;
+      }
+      .basket__sneakers{
+        width: 300px;
+        height: 100%;
+        background-color: #FFFFFF;
+        .basket__inner-block{
+          background-color: #FFFFFF;
+          position: fixed;
+          width: 280px;
+          height: 100%;
+          right: 0;
+          top:0;
+          z-index: 10;
+          padding: 10px 50px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .basket__wrapper{
+            .basket__sneaker-block{
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
+              border-radius: 20px;
+              border: solid 1px #f3f3f3;
+              width: 325px;
+              height: 119px;
+              margin: 10px auto;
+
+              .basket__description-block{
+                width: 170px;
+                height: 60%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+              }
+
+              .basket__img{
+                width: 70px;
+                height: 70px;
+              }
+
+              .basket__cancel-block{
+                width: 21px;
+                .basket__cancel-icon{
+                  padding: 10px;
+                  width: 11px;
+                  height: 11px;
+                  cursor: pointer;
+                  transition: all .1s ;
+                  border: 1px solid #DBDBDB;
+                  border-radius: 8px;
+                  opacity: 0.5;
+                  position: relative;
+                  right: 10px;
+                  &:hover{
+                    opacity: 1;
+                  }
+                }
+              }
+
+            }
+
+            .basket__title{
+              font-family: 'inter';
+              font-size: 24px;
+            }
+          }
+
+          .basket__order-form-block{
+            height: 150px;
+            .basket__order-form{
+              width: 100%;
+              display: flex;
+              justify-content: flex-end;
+              flex-direction: column;
+              align-items: center;
+              .basket__order-list{
+                width: 100%;
+                    li{
+                      display: flex;
+                      justify-content: space-between;
+                      background-color: #FFFFFF;
+                      margin: 9px auto;
+                      align-items: self-start;
+                      width: 100%;
+                      .basket__dash{
+                        border-bottom: dashed 1px #DFDFDF;
+                        width: 100%;
+                        height: 12px;
+                      }
+                      span{
+                        text-align: left;
+                        margin: auto 5px;
+                        white-space: nowrap;
+                        font-size: 16px;
+                      }
+                      .basket__submit-block{
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        .basket__submit-button{
+                          cursor: pointer;
+                          background: none;
+                        background: #9DD558;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 18px;
+                        width: 260px;
+                        height: 40px;
+                          border: none;
+
+                          font-family: Inter;
+                          font-style: normal;
+                          font-weight: 600;
+                          font-size: 16px;
+                          line-height: 19px;
+                          text-align: center;
+                          color: #FFFFFF;
+                        }
+                        .basket__arrow-icon{
+                          position: relative;
+                          left: 20px;
+                        }
+                      }
+
+                    }
+              }
+
+
             }
           }
         }
 
       }
+
 
     }
   }
+
+
+
+
 }
 
-input{
-  outline: none;
+
+
+h4{
+  font-weight: normal;
 }
 .price{
   font-size: 14px;

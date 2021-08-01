@@ -2,6 +2,79 @@
 function App() {
   return (
     <div className = "wrapper">
+
+        <div className="basket">
+            <div className="basket__blind"></div>
+            <div className="basket__sneakers">
+                <div className="basket__inner-block">
+                    <div className="basket__wrapper">
+                        <h2 className="basket__title">Корзина</h2>
+
+                        <div className="basket__sneaker-block">
+                        <img src="assets/image 1.png"  alt="" className="basket__img"/>
+                        <span className="basket__description-block">
+                            <p className="basket__description">Мужские Кроссовки
+                                Nike Air Max 270
+                            </p>
+                            <strong>12000 тг</strong>
+                        </span>
+                        <span className="basket__cancel-block">
+                            <img src="assets/cancel-button.svg" alt="" className="basket__cancel-icon"/>
+                        </span>
+
+                    </div>
+
+                        <div className="basket__sneaker-block">
+                            <img src="assets/image 2.jpg"  alt="" className="basket__img"/>
+                            <span className="basket__description-block">
+                            <p className="basket__description">Мужские Кроссовки
+                                Nike Air Max 270
+                            </p>
+                            <strong>12000 тг</strong>
+                        </span>
+                            <span className="basket__cancel-block">
+                            <img src="assets/cancel-button.svg" alt="" className="basket__cancel-icon"/>
+                        </span>
+                        </div>
+                    </div>
+
+
+                    <div className="basket__order-form-block">
+                        <form action="" className="basket__order-form">
+                            <ul className="basket__order-list">
+                                <li>
+                                    <span>Итого:</span>
+                                    <span className="basket__dash"></span>
+                                    <span className="basket__price">
+                                        <strong>12000 тг</strong>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>Налог 5%:</span>
+                                    <span className="basket__dash"></span>
+                                    <span className="basket__price">
+                                        <strong>12000 тг</strong>
+                                    </span>
+                                </li>
+                                <li>
+                                    <div className="basket__submit-block">
+                                        <button className="basket__submit-button">
+                                            Оформить заказ
+                                            <img src="assets/arrow.svg" alt="" className="basket__arrow-icon"/>
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
         <header className= "header">
             <div className="header__left-side">
                 <img src="assets/logo-sneakers.png" className="header__logo" alt="logo"/>
@@ -48,7 +121,8 @@ function App() {
 
 
                     <form action="" className="content__search-form">
-                        <input type="text" className="content__input" placeholder="&#128269;  поиск..."/>
+                        <img src="assets/search.svg" alt="" className="content__search-icon"/>
+                        <input type="text" className="content__input" placeholder="Поиск..."/>
                     </form>
                 </div>
 
